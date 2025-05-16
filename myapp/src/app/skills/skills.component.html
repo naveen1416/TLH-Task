@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Skills Overview </h2>
+
+  <div class="row">
+    <!-- Frontend Skills -->
+    <div class="col-md-12 mb-4">
+      <h4>Frontend Skills</h4>
+      <div>
+        <span *ngFor="let skill of frontendSkills" class="badge bg-primary me-1 mb-1">
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Backend Skills -->
+    <div class="col-md-12 mb-4">
+      <h4>Backend Skills</h4>
+      <div>
+        <span *ngFor="let skill of backendSkills" class="badge bg-success me-1 mb-1">
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Other Skills -->
+    <div class="col-md-12 mb-4">
+      <h4>Other Skills</h4>
+      <div>
+        <span *ngFor="let skill of otherSkills" class="badge bg-secondary me-1 mb-1">
+          {{ skill }}
+        </span>
+      </div>
+    </div>
+    <div class="col-md-12 text-center">
+         <a class="btn btn-dark" routerLink="/skills">Update Skills</a>
+    </div>
+  </div>
+</div>

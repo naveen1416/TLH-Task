@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <h2>Update Skills</h2>
+  <form (ngSubmit)="updateSkills()" #skillsForm="ngForm" class="mt-4">
+
+    <div class="mb-3">
+      <label for="frontend" class="form-label">Frontend Skills (comma-separated)</label>
+      <textarea id="frontend" name="frontend" class="form-control" rows="3"
+                [(ngModel)]="skills.frontend" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="backend" class="form-label">Backend Skills (comma-separated)</label>
+      <textarea id="backend" name="backend" class="form-control" rows="3"
+                [(ngModel)]="skills.backend" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="others" class="form-label">Other Skills (comma-separated)</label>
+      <textarea id="others" name="others" class="form-control" rows="3"
+                [(ngModel)]="skills.others" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!skillsForm.form.valid">
+      Update Skills
+    </button>
+    <button class=" btn btn-outline-danger mx-3" routerLink="/">Cancel</button>
+    <div *ngIf="responseMessage" class="alert alert-info mt-3">
+      {{ responseMessage }}
+    </div>
+  </form>
+</div>

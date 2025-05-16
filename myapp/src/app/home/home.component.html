@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <div class="card border-0 shadow">
+    <div class="card-body">
+      <!-- <img
+        [src]="'http://localhost/projects/Lettinghub/uploads/' + profile.pic"
+        alt="Profile Pic"
+        class="rounded-circle mb-3"
+        width="120"
+        height="120"
+      /> -->
+      <h3>{{ profile.name }}</h3>
+      <h5 class="text-muted">{{ profile.role }}</h5>
+      <p>{{ profile.bio }}</p>
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+    <a class="btn btn-dark" routerLink="/profile">Update</a>
+    </div>
+    <!-- <div class="card-footer text-muted">
+      Created on: {{ profile.created_on }} |
+      Last updated: {{ profile.updated_on }}
+    </div> -->
+  </div>
+  <div class="card mt-2 p-3 border-0 shadow">
+    <app-skills></app-skills>
+  </div>
+</div>
+
